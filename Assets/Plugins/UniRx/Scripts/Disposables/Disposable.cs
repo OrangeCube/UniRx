@@ -9,7 +9,7 @@ namespace UniRx
 {
     public static class Disposable
     {
-        public static IDisposable Empty { get; } = EmptyDisposable.Singleton;
+        public static readonly IDisposable Empty = EmptyDisposable.Singleton;
 
         public static IDisposable Create(Action disposeAction)
         {
